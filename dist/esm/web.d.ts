@@ -1,12 +1,23 @@
 import { WebPlugin } from '@capacitor/core';
-import { C4GunApiCapacitorPluginPlugin } from './definitions';
-export declare class C4GunApiCapacitorPluginWeb extends WebPlugin implements C4GunApiCapacitorPluginPlugin {
-    constructor();
+import { C4GunApiCapacitorPlugin } from './definitions';
+export declare class C4GunApiCapacitorPluginWeb extends WebPlugin implements C4GunApiCapacitorPlugin {
     echo(options: {
         value: string;
     }): Promise<{
         value: string;
     }>;
+    getFirmware(): Promise<{
+        firmware: number[];
+    }>;
+    startInventory(): Promise<{
+        uhfData: string[];
+    }>;
+    stopInventory(): Promise<boolean>;
+    setOutputPower(): Promise<boolean>;
+    scanBarcode(): Promise<{
+        barcodeData: string;
+    }>;
+    private throwUnimplementedError;
 }
 declare const C4GunApiCapacitorPlugin: C4GunApiCapacitorPluginWeb;
 export { C4GunApiCapacitorPlugin };

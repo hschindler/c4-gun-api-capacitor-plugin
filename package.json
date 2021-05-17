@@ -17,21 +17,20 @@
   "author": "Heiko Schindler",
   "license": "MIT",
   "devDependencies": {
-    "@capacitor/android": "^2.4.7",
-    "@capacitor/core": "^2.4.7",
-    "@capacitor/ios": "^2.4.7",
+    "@capacitor/android": "next",
+    "@capacitor/ios": "next",
     "@ionic/prettier-config": "^1.0.0",
     "@ionic/swiftlint-config": "^1.0.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
     "prettier": "^2.0.5",
-    "prettier-plugin-java": "^0.8.0",
+    "prettier-plugin-java": "^1.0.2",
     "rimraf": "^3.0.0",
     "rollup": "^2.21.0",
     "swiftlint": "^1.0.1",
     "typescript": "~3.8.3"
   },
   "peerDependencies": {
-    "@capacitor/core": "^2.4.7"
+    "@capacitor/core": "next"
   },
   "files": [
     "dist/",
@@ -60,5 +59,8 @@
   },
   "bugs": {
     "url": "https://github.com/hschindler/c4-gun-api-capacitor-plugin.git/issues"
+  },
+  "dependencies": {
+    "@capacitor/core": "^3.0.0-rc.3"
   }
 }

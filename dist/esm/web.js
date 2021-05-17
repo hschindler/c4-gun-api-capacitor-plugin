@@ -1,25 +1,37 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { WebPlugin } from '@capacitor/core';
 export class C4GunApiCapacitorPluginWeb extends WebPlugin {
-    constructor() {
-        super({
-            name: ' C4GunApiCapacitorPlugin',
-            platforms: ['web'],
-        });
+    // constructor() {
+    //   super({
+    //     name: ' C4GunApiCapacitorPlugin',
+    //     platforms: ['web'],
+    //   });
+    // }
+    async echo(options) {
+        console.log('ECHO', options);
+        return options;
     }
-    echo(options) {
-        return __awaiter(this, void 0, void 0, function* () {
-            console.log('ECHO', options);
-            return options;
-        });
+    async getFirmware() {
+        // logic here
+        this.throwUnimplementedError();
+    }
+    async startInventory() {
+        // logic here
+        this.throwUnimplementedError();
+    }
+    async stopInventory() {
+        // logic here
+        this.throwUnimplementedError();
+    }
+    async setOutputPower() {
+        // logic here
+        this.throwUnimplementedError();
+    }
+    async scanBarcode() {
+        // logic here
+        this.throwUnimplementedError();
+    }
+    throwUnimplementedError() {
+        throw this.unimplemented('Not implemented on web.');
     }
 }
 const C4GunApiCapacitorPlugin = new C4GunApiCapacitorPluginWeb();
