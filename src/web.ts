@@ -14,7 +14,7 @@ export class C4GunApiCapacitorPluginWeb extends WebPlugin implements C4GunApiCap
     return options;
   }
 
-  async getFirmware(): Promise<{ firmware: number[] }> {
+  async getFirmware(): Promise<{ firmware: string }> {
     // logic here
     this.throwUnimplementedError();
   }

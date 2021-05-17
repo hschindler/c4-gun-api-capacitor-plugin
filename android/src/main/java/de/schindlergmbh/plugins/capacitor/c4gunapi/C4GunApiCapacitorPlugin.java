@@ -45,7 +45,7 @@ public class  C4GunApiCapacitorPlugin extends Plugin {
     private Thread _scanThread;
 
 
-    private KeyReceiver keyReceiver = new KeyReceiver(getContext());
+    private KeyReceiver _keyReceiver;
 
     @PluginMethod
     public void echo(PluginCall call) {
@@ -61,6 +61,8 @@ public class  C4GunApiCapacitorPlugin extends Plugin {
     public void getFirmware(PluginCall call) {
        
         Log.d(TAG, "getFirmware");
+
+        this.initKeyReceiver();
 
         this.initializeUHFManager();
 
@@ -235,5 +237,12 @@ public class  C4GunApiCapacitorPlugin extends Plugin {
 
             this._uhfManager = null;
         }
+    }
+
+    private void initKeyReceiver() {
+        if (this._keyReceiver == null) {
+            this._keyReceiver = new KeyReceiver(getContext());
+        }
+        
     }
 }

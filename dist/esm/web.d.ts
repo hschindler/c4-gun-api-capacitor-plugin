@@ -7,7 +7,7 @@ export declare class C4GunApiCapacitorPluginWeb extends WebPlugin implements C4G
         value: string;
     }>;
     getFirmware(): Promise<{
-        firmware: number[];
+        firmware: string;
     }>;
     startInventory(): Promise<{
         uhfData: string[];

@@ -3,21 +3,9 @@ manifest
 ADDED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
 INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
 INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
-INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
 	package
 		ADDED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:3:7-84
 		INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml
-		INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml
-	android:versionName
-		INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml
-		ADDED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
-		INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml
-	android:versionCode
-		INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml
-		ADDED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:3-4:14
 		INJECTED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Projekte\SAnywhere\git\CapacitorPlugins\c4-gun-api-capacitor-plugin\android\src\main\AndroidManifest.xml:2:13-71

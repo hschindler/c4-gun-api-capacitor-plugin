@@ -10,7 +10,7 @@ export interface C4GunApiCapacitorPlugin {
     * @since 1.0.0
     */
     getFirmware(): Promise<{
-        firmware: number[];
+        firmware: string;
     }>;
     /**
     * Starts RFID UHF inventory.
