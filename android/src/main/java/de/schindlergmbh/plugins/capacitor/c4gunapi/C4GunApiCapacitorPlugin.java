@@ -19,6 +19,8 @@ import android.provider.Settings;
 
 import android.nfc.Tag;
 import android.util.Log;
+import android.content.Intent;
+import android.content.IntentFilter;
 
 
 import com.pda.uhfm.UHFManager;
@@ -243,6 +245,19 @@ public class  C4GunApiCapacitorPlugin extends Plugin {
         if (this._keyReceiver == null) {
             this._keyReceiver = new KeyReceiver(getContext());
         }
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction("android.rfid.FUN_KEY");
+        getContext().registerReceiver(this._keyReceiver, filter);
         
+    }
+
+    private void unregisterReceiver() {
+        try {
+            getContext().unregisterReceiver(this._keyReceiver);
+        } catch (Exception e) {
+
+        }
+
     }
 }

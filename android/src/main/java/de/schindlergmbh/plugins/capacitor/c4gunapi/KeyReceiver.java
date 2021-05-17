@@ -36,6 +36,7 @@ class KeyReceiver extends BroadcastReceiver {
         boolean keyDown = intent.getBooleanExtra("keydown", false);
 
         if (keyDown) {
+            Log.d(TAG, "keyCode = " + keyCode);
             this.showToast("KeyReceiver:keyCode = " + keyCode);
 
             switch (keyCode) {
