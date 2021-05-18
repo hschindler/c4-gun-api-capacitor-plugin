@@ -13,10 +13,8 @@ export declare class C4GunApiCapacitorPluginWeb extends WebPlugin implements C4G
         uhfData: string[];
     }>;
     stopInventory(): Promise<boolean>;
-    setOutputPower(): Promise<boolean>;
-    scanBarcode(): Promise<{
-        barcodeData: string;
-    }>;
+    setOutputPower(): Promise<void>;
+    getOutputPower(): Promise<number>;
     private throwUnimplementedError;
 }
 declare const C4GunApiCapacitorPlugin: C4GunApiCapacitorPluginWeb;
