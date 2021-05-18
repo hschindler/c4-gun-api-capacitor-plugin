@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
-import android.widget.Toast;
+// import android.widget.Toast;
 
 import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
@@ -18,7 +18,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 class KeyReceiver extends BroadcastReceiver {
 
     private final String TAG = KeyReceiver.class.getName();
-    private Toast toast;
+    // private Toast toast;
     private Context _context;
     private KeyReceiverCallback _onReceiveCallback;
 
@@ -39,7 +39,7 @@ class KeyReceiver extends BroadcastReceiver {
 
         if (keyDown) {
             Log.d(TAG, "keyCode = " + keyCode);
-            this.showToast("KeyReceiver:keyCode = " + keyCode);
+            // this.showToast("KeyReceiver:keyCode = " + keyCode);
 
             switch (keyCode) {
                 case KeyEvent.KEYCODE_F1:
@@ -52,7 +52,7 @@ class KeyReceiver extends BroadcastReceiver {
                    
                         // TODO: fire event 
                         this._onReceiveCallback.onReceiveCallback();
-                        this.showToast("scan clicked");
+                        // this.showToast("scan clicked");
                         // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, "scan clicked");
                         // pluginResult.setKeepCallback(true);
                         // _scanKeyCallBackContext.sendPluginResult(pluginResult);
@@ -70,14 +70,14 @@ class KeyReceiver extends BroadcastReceiver {
 
     }
 
-    private void showToast(String text) {
-        if (toast == null) {
-            toast = Toast.makeText(this._context, text,
-                    Toast.LENGTH_SHORT);
-        } else {
-            toast.setText(text);
-        }
+    // private void showToast(String text) {
+    //     if (toast == null) {
+    //         toast = Toast.makeText(this._context, text,
+    //                 Toast.LENGTH_SHORT);
+    //     } else {
+    //         toast.setText(text);
+    //     }
 
-        toast.show();
-    }
+    //     toast.show();
+    // }
 }
