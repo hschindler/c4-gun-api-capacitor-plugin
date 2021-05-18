@@ -1,6 +1,10 @@
 de/schindlergmbh/plugins/capacitor/c4gunapi/KeyReceiver.java
  de.schindlergmbh.plugins.capacitor.c4gunapi.KeyReceiver
+de/schindlergmbh/plugins/capacitor/c4gunapi/KeyReceiverCallback.java
+ de.schindlergmbh.plugins.capacitor.c4gunapi.KeyReceiverCallback
 de/schindlergmbh/plugins/capacitor/c4gunapi/c4gunapicapacitorplugin/BuildConfig.java
  de.schindlergmbh.plugins.capacitor.c4gunapi.c4gunapicapacitorplugin.BuildConfig
 de/schindlergmbh/plugins/capacitor/c4gunapi/C4GunApiCapacitorPlugin.java
  de.schindlergmbh.plugins.capacitor.c4gunapi.C4GunApiCapacitorPlugin
+ de.schindlergmbh.plugins.capacitor.c4gunapi.C4GunApiCapacitorPlugin$CallBackImpl
+ de.schindlergmbh.plugins.capacitor.c4gunapi.C4GunApiCapacitorPlugin$InventoryThread

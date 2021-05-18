@@ -29,15 +29,16 @@ export class C4GunApiCapacitorPluginWeb extends WebPlugin implements C4GunApiCap
     this.throwUnimplementedError();
   }
 
-  async setOutputPower(): Promise<boolean> {
+  async setOutputPower(): Promise<void> {
     // logic here
     this.throwUnimplementedError();
   }
 
-  async scanBarcode(): Promise<{ barcodeData: string }> {
+  async getOutputPower(): Promise<number> {
     // logic here
     this.throwUnimplementedError();
   }
+
 
   private throwUnimplementedError(): never {
     throw this.unimplemented('Not implemented on web.');
