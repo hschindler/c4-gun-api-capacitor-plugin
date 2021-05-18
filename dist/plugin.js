@@ -32,7 +32,7 @@ var capacitorC4GunApiCapacitorPlugin = (function (exports, core) {
             // logic here
             this.throwUnimplementedError();
         }
-        async getOutputPower() {
+        async scanBarcode() {
             // logic here
             this.throwUnimplementedError();
         }

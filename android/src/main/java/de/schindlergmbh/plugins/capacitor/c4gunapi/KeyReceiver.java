@@ -20,11 +20,9 @@ class KeyReceiver extends BroadcastReceiver {
     private final String TAG = KeyReceiver.class.getName();
     private Toast toast;
     private Context _context;
-    private KeyReceiverCallback _onReceiveCallback;
 
-    public KeyReceiver(Context context, KeyReceiverCallback onReceiveCallback) {
+    public KeyReceiver(Context context) {
         this._context = context;
-        this._onReceiveCallback = onReceiveCallback;
     }
 
     @Override
@@ -51,7 +49,6 @@ class KeyReceiver extends BroadcastReceiver {
                 case KeyEvent.KEYCODE_F3:
                    
                         // TODO: fire event 
-                        this._onReceiveCallback.onReceiveCallback();
                         this.showToast("scan clicked");
                         // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, "scan clicked");
                         // pluginResult.setKeepCallback(true);

@@ -35,7 +35,7 @@ class C4GunApiCapacitorPluginWeb extends core.WebPlugin {
         // logic here
         this.throwUnimplementedError();
     }
-    async getOutputPower() {
+    async scanBarcode() {
         // logic here
         this.throwUnimplementedError();
     }
