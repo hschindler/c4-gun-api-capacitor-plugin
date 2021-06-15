@@ -50,7 +50,6 @@ class KeyReceiver extends BroadcastReceiver {
                     break;
                 case KeyEvent.KEYCODE_F3:
                    
-                        // TODO: fire event 
                         this._onReceiveCallback.onReceiveCallback();
                         // this.showToast("scan clicked");
                         // PluginResult pluginResult = new PluginResult(PluginResult.Status.OK, "scan clicked");

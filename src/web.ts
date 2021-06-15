@@ -29,7 +29,7 @@ export class C4GunApiCapacitorPluginWeb extends WebPlugin implements C4GunApiCap
     this.throwUnimplementedError();
   }
 
-  async setOutputPower(): Promise<void> {
+  async setOutputPower(): Promise<number> {
     // logic here
     this.throwUnimplementedError();
   }

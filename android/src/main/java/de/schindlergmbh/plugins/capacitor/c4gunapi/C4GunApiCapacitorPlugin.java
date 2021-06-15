@@ -141,13 +141,19 @@ public class C4GunApiCapacitorPlugin extends com.getcapacitor.Plugin {
     }
 
 
-    @PluginMethod(returnType = PluginMethod.RETURN_NONE)
+    @PluginMethod()
     public void setOutputPower(PluginCall call) {
         // 0-30
-        String value = call.getString("value");
+        Integer value = call.getInt("value", 30);
 
-        this._outputPower = Integer.parseInt(value);
-
+        if (value != null) {
+            Log.d(TAG, "Power value = " + value);
+            this._outputPower = value;
+            Log.d(TAG, "outputPower value = " + new Integer(this._outputPower).toString());
+        } else {
+            Log.d(TAG, "Power value = null");
+        }
+        
         JSObject ret = new JSObject();
         ret.put("value", this._outputPower);
         call.resolve(ret);

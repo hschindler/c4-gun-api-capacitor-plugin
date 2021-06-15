@@ -19,7 +19,9 @@ export interface C4GunApiCapacitorPlugin {
     *
     * @since 1.0.0
     */
-    startInventory(value: string): Promise<{
+    startInventory(options: {
+        value: string;
+    }): Promise<{
         uhfData: string[];
     }>;
     /**
@@ -33,7 +35,9 @@ export interface C4GunApiCapacitorPlugin {
     *
     * @since 1.0.0
     */
-    setOutputPower(value: number): Promise<void>;
+    setOutputPower(options: {
+        value: number;
+    }): Promise<number>;
     /**
    * Sets RFID UHF output power.
    *
@@ -41,7 +45,7 @@ export interface C4GunApiCapacitorPlugin {
    */
     getOutputPower(): Promise<number>;
     /**
-     * Listen for changes in the App's active state (whether the app is in the foreground or background)
+     * Listen for scanButtonPressed
      *
      * @since 1.0.0
      */
