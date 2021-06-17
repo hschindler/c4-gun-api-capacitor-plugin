@@ -1,6 +1,6 @@
 {
   "name": "c4-gun-api-capacitor-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": " Plugin for C4 Handheld API UHF and Barcode Module",
   "main": "dist/plugin.js",
   "module": "dist/esm/index.js",
