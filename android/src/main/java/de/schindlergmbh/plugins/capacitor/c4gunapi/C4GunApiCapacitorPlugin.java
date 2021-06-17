@@ -194,6 +194,12 @@ public class C4GunApiCapacitorPlugin extends com.getcapacitor.Plugin {
 
                 if (this._outputPower > 0) {
                     boolean result = this._uhfManager.setReadPower(this._outputPower);
+
+                    if (result == true) {
+                        Log.d(TAG, "initializeUHFManager setReadPower success");
+                    } else {
+                        Log.d(TAG, "initializeUHFManager setReadPower failed");
+                    }
                 } else {
                     this._uhfManager.setReadPower(27); // 0-30
                 }
@@ -404,6 +410,14 @@ public class C4GunApiCapacitorPlugin extends com.getcapacitor.Plugin {
                             } else {
                                 Log.d(TAG, "tagDataModels = null");
                             }
+
+                            if ((dataList != null) && (!dataList.isEmpty())) {
+                                if (dataList.size() > 0) {
+                                    returnCurrentTIDs(dataList, savedCall);
+                                    startFlag = false;
+                                }
+                            }
+                            
                         } catch (Exception ex) {
                             Log.e(TAG, "GetTID Exception: " + ex.getMessage());
                             savedCall.reject("Fehler-GetTID: " + ex.getMessage());
@@ -416,20 +430,34 @@ public class C4GunApiCapacitorPlugin extends com.getcapacitor.Plugin {
 
                             _uhfManager.startInventory(false); // multiMode
 
-                            byte[] bytess = _uhfManager.getEPCByteBuff();
-                            if (bytess != null) {
-                                com.pda.uhfm.EPCDataModel epcDataModel = _uhfManager.getEPC(bytess);
-                                if (epcDataModel != null) {
-                                    byte[] epcdata = epcDataModel.EPC;
-                                    int rssi = epcDataModel.RSSI;
-                                    String epc = Tools.Bytes2HexString(epcdata, epcdata.length);
-                                    // Log.e("inventoryTask", epc) ;
-                                    if (dataList == null) {
-                                        dataList = new ArrayList<String>();
+                            while (startFlag) {
+
+                                byte[] bytess = _uhfManager.getEPCByteBuff();
+                                if (bytess != null) {
+                                    com.pda.uhfm.EPCDataModel epcDataModel = _uhfManager.getEPC(bytess);
+                                    if (epcDataModel != null) {
+                                        byte[] epcdata = epcDataModel.EPC;
+                                        int rssi = epcDataModel.RSSI;
+                                        String epc = Tools.Bytes2HexString(epcdata, epcdata.length);
+                                        // Log.e("inventoryTask", epc) ;
+                                        if (dataList == null) {
+                                            dataList = new ArrayList<String>();
+                                        }
+                                        dataList.add(epc);
                                     }
-                                    dataList.add(epc);
                                 }
+
+                                if ((dataList != null) && (!dataList.isEmpty())) {
+                                    if (dataList.size() > 0) {
+                                        returnCurrentTIDs(dataList, savedCall);
+                                        startFlag = false;
+                                    }
+                                }
+
                             }
+
+                            
+                            _uhfManager.stopInventory();
                      
                         } catch (Exception ex) {
                             Log.e(TAG, "GetEPC Exception: " + ex.getMessage());
@@ -443,12 +471,7 @@ public class C4GunApiCapacitorPlugin extends com.getcapacitor.Plugin {
                     savedCall.reject("UHFManager is not initialized!");
                 }                
 
-                if ((dataList != null) && (!dataList.isEmpty())) {
-                    if (dataList.size() > 0) {
-                        returnCurrentTIDs(dataList, savedCall);
-                        startFlag = false;
-                    }
-                }
+               
 
                 // epcList = null;
                 dataList = null;
