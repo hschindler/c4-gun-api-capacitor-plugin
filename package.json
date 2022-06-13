@@ -17,8 +17,8 @@
   "author": "Heiko Schindler",
   "license": "MIT",
   "devDependencies": {
-    "@capacitor/android": "next",
-    "@capacitor/ios": "next",
+    "@capacitor/android": "^3.4.3",
+    "@capacitor/ios": "^3.4.3",
     "@ionic/prettier-config": "^1.0.0",
     "@ionic/swiftlint-config": "^1.0.0",
     "@rollup/plugin-node-resolve": "^8.1.0",
@@ -30,7 +30,7 @@
     "typescript": "~3.8.3"
   },
   "peerDependencies": {
-    "@capacitor/core": "next"
+    "@capacitor/core": "3.4.3"
   },
   "files": [
     "dist/",
